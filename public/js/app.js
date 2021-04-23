@@ -19392,7 +19392,7 @@ var render = function() {
   return _c("div", { staticClass: "col-12" }, [
     _c("h1", [_vm._v("Hello world")]),
     _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(this.txt))])
+    _c("p", [_vm._v(_vm._s(_vm.txt))])
   ])
 }
 var staticRenderFns = []

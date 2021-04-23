@@ -1,7 +1,7 @@
 <template>
     <div class="col-12">
         <h1>Hello world</h1>
-        <p>{{ this.txt }}</p>
+        <p>{{ txt }}</p>
     </div>
 </template>
 
