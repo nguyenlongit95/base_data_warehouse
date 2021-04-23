@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::group(['prefix' => '/admin', 'namespace' => '\App\Http\Controllers\Auth'], function () {
@@ -105,5 +105,9 @@ Route::group(['middleware' => 'checkAdminLogin', 'prefix' => 'admin', 'namespace
 
     Route::group(['prefix' => 'Paypal'], function () {
         Route::get('direct-payment', 'DashBoardController@paypalDirectPayment');
+    });
+
+    Route::group(['prefix' => 'scrape'], function () {
+        Route::get('TGDD', [\App\Http\Controllers\Admin\ScrapeController::class, 'scrapeTheGioiDiDong']);
     });
 });
