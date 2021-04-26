@@ -6,6 +6,12 @@
 </template>
 
 <script>
+    import Vue from 'vue';
+    import VueToast from 'vue-toast-notification';
+    import 'vue-toast-notification/dist/theme-sugar.css';
+
+    Vue.use(VueToast);
+
     export default {
         data() {
             return {
@@ -14,10 +20,18 @@
         },
         created: function()
         {
-
+            this.openToast('Base data ware house vue.js', 'success', 2000);
         },
         methods: {
-
+            openToast (message, type, duration, dismissible) {
+                Vue.$toast.open({
+                    message: message,
+                    type: type,
+                    duration: duration,
+                    dismissible: dismissible,
+                    position: 'top-right'
+                })
+            },
         }
     }
 </script>

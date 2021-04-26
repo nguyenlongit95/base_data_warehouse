@@ -66,3 +66,6 @@ npm install
 
 ## install Goutte Crawl Data
 composer require fabpot/goutte
+
+## install toast notification in vue.js
+npm install vue-toast-notification
